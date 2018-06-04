@@ -104,7 +104,7 @@ export default class App extends React.Component {
         renderItem={({item: rowData}) => {
           return(
             <Card
-              style={{height: 600}}
+              style={{height: 400}}
               title={rowData.letter}
               titleStyle={{fontSize: 100, marginTop: 155}}
               containerStyle={{ padding: 30, width: 300, height: 600, marginTop: 100}}
