@@ -30,14 +30,15 @@ export default class App extends React.Component {
   render() {
     const { letters } = this.state
     return  (
-      <ScrollView horizontal={true} style={{ justifyContent: "center", alignItems: "center" }}>
+      
+      <ScrollView horizontal={true} style={{ alignItems: "center" }}>
         { letters.map(letters => (
         <TouchableOpacity onPress={this.openModal}>
           <Card
             style={{height: deviceHeight * .60}}
             title={letters}
-            titleStyle={{fontSize: 100, marginTop: 130}}
-            containerStyle={{ padding: 30, width: deviceWidth * .8, height: deviceHeight * .70, marginTop: 40}}
+            titleStyle={{fontSize: 100, marginTop: deviceHeight * .2}}
+            containerStyle={{ padding: 30, width: deviceWidth * .8, height: deviceHeight * .70}}
             >
           </Card>
         </TouchableOpacity>
