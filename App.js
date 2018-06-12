@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Letters from './components/Letters';
 import Numbers from './components/Numbers';
 import Colors from './components/Colors';
+import Shapes from './components/Shapes';
 import MyFamily from './components/MyFamily';
 
 
@@ -21,6 +22,9 @@ const RootStack = StackNavigator(
     },
     Colors: {
       screen: Colors,
+    },
+    Shapes: {
+      screen: Shapes,
     },
     MyFamily: {
       screen: MyFamily,

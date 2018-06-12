@@ -1,17 +1,34 @@
 import React from "react";
-import { TouchableOpacity, View, Dimensions, ScrollView} from "react-native";
+import { TouchableOpacity, View, Dimensions, ScrollView, Image } from "react-native";
 import Modal from "react-native-simple-modal";
-import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right, Text} from 'native-base';
+import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right, Text,} from 'native-base';
 
 const deviceHeight = Dimensions.get('window').height
 const deviceWidth = Dimensions.get('window').width
 
 
-export default class Numbers extends React.Component {
+export default class Shapes extends React.Component {
   state = { 
     open: false, 
-    numbers: ["1", "2", "3", "4", "5", "6", "7" ,"8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21" ,"22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35" ,"36", "37", "38", "39", "40"],
-  }
+        shapes: [
+          { shape: "Circle",
+            link: "https://commons.wikimedia.org/wiki/File:Circle_-_black_simple.svg",
+          },
+          { shape: "Triangle",
+            link: "https://en.wiktionary.org/wiki/triangle",
+          },
+          { shape: "Square",
+            link: "https://en.wiktionary.org/wiki/square",
+          },
+          { shape: "Rectangle",
+            link: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.math.nmsu.edu%2F~breakingaway%2FLessons%2FCAR%2FCAR_files%2Fimage005.gif&imgrefurl=https%3A%2F%2Fwww.math.nmsu.edu%2F~breakingaway%2FLessons%2FCAR%2FCAR.html&docid=blANQGKNtwO3nM&tbnid=2n8LeNMUOTU6JM%3A&vet=10ahUKEwjbsoyLh8_bAhVM8IMKHexHAi0QMwjvASgCMAI..i&w=410&h=247&bih=976&biw=1680&q=rectangle&ved=0ahUKEwjbsoyLh8_bAhVM8IMKHexHAi0QMwjvASgCMAI&iact=mrc&uact=8",
+          },
+          { shape: "Octogon",
+          link: "https://www.pelennapatchworks.co.uk/freezer-paper-templates-for-patchwork/octagon-freezer-paper-templates.html",
+          },
+        ],
+      }
+
   
  
   modalDidOpen = () => console.log("Modal did open.");
@@ -30,15 +47,18 @@ export default class Numbers extends React.Component {
   closeModal = () => this.setState({ open: false });
  
   render() {
-    const { numbers } = this.state
+    const { shapes } = this.state
     return  (
       
       <ScrollView horizontal={true} style={{ alignItems: "center" }}>
-        { numbers.map(numbers => (
+        { shapes.map(shapes => (
           <Card style={{height: deviceHeight * .6, width: deviceWidth * .8}}>
+            <CardItem cardBody>
+            <Image source={require('./profilepic.jpg')} style={{height: 200, width: null, flex: 1}}/>
+            </CardItem>
             <CardItem header style={{height: deviceHeight * .6, width: null, flex: 1,}}>
               <Body style={{ justifyContent: 'center', alignItems: 'center'}} onPress={this.openModal}>
-                <Text style={{ alignItems: 'center', justifyContent: 'center', fontSize: 120,}}> {numbers} </Text>
+                <Text style={{ alignItems: 'center', justifyContent: 'center', fontSize: 40,}}> {shapes.shape} </Text>
               </Body>
             </CardItem>
         </Card>  
@@ -74,7 +94,7 @@ export default class Numbers extends React.Component {
 
 {/* <Card
           style={{height: deviceHeight * .60}}
-          title={numbers}
+          title={shapes}
           titleStyle={{fontSize: 100, marginTop: deviceHeight * .2}}
           containerStyle={{ padding: 30, width: deviceWidth * .8, height: deviceHeight * .70}}
           >

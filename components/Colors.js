@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, TouchableOpacity, TouchableHighlight, View, Dimensions, ScrollView, Image } from "react-native";
 import Modal from "react-native-simple-modal";
-import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base';import Sketch from 'react-native-sketch';
+import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base';
 
 const deviceHeight = Dimensions.get('window').height
 const deviceWidth = Dimensions.get('window').width
