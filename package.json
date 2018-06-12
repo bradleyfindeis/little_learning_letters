@@ -19,13 +19,22 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "create-repack-app": "^1.8.4",
     "expo": "^27.0.1",
     "native-base": "^2.5.1",
+    "prop-types": "^15.6.1",
     "react": "16.3.1",
     "react-native": "^0.55.4",
     "react-native-card-flip": "^1.0.3",
     "react-native-elements": "^0.19.1",
     "react-native-simple-modal": "^9.0.0",
-    "react-native-sketch": "^1.1.0"
+    "react-native-sketch": "^1.1.0",
+    "react-navigation": "^2.2.5",
+    "react-redux": "^5.0.7",
+    "react-router-native": "^4.3.0",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "repack": "^0.0.1"
   }
 }

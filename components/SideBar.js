@@ -7,12 +7,12 @@ import {
   Image,
   ScrollView,
   StyleSheet,
-  NavigatorIOS,
 } from 'react-native';
 import {  Button } from 'native-base';
 import Letters from './Letters';
 import Numbers from './Numbers';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
+
 
 export default class SideBar extends Component {
   static propTypes = {
@@ -40,16 +40,8 @@ export default class SideBar extends Component {
       <ScrollView style={styles.container}>
         <Text style={styles.text}>Side Menu</Text>
         <Image source={require('./profilepic.jpg')} style={styles.topImage} />
-          <Button style={styles.button} block success onPress={() => this._onForward}><Text style={styles.text}>Letters</Text><NavigatorIOS
-            initialRoute={{
-              component: Letters,
-            }}
-          /></Button>
-          <Button style={styles.button} block warning><Text style={styles.text}>Numbers</Text><NavigatorIOS
-            initialRoute={{
-              component: Numbers,
-            }}
-          /></Button>
+          <Button style={styles.button} block success onPress={() => this.props.navigation.navigate('Letters')}><Text style={styles.text}>Letters</Text></Button>
+          <Button style={styles.button} block warning onPress={() => this.props.navigation.navigate('Numbers')}><Text style={styles.text}>Numbers</Text></Button>
       </ScrollView>
     );
   }
