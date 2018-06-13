@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, View, Dimensions, ScrollView} from "react-native";
+import { TouchableOpacity, View, Dimensions, ScrollView, TouchableHighlight } from "react-native";
 import Modal from "react-native-simple-modal";
 import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right, Text} from 'native-base';
 
@@ -32,13 +32,14 @@ export default class Numbers extends React.Component {
   render() {
     const { numbers } = this.state
     return  (
-      
       <ScrollView horizontal={true} style={{ alignItems: "center" }}>
         { numbers.map(numbers => (
           <Card style={{height: deviceHeight * .6, width: deviceWidth * .8}}>
             <CardItem header style={{height: deviceHeight * .6, width: null, flex: 1,}}>
               <Body style={{ justifyContent: 'center', alignItems: 'center'}} onPress={this.openModal}>
-                <Text style={{ alignItems: 'center', justifyContent: 'center', fontSize: 120,}}> {numbers} </Text>
+                <TouchableOpacity onPress={this.openModal}>
+                  <Text style={{ alignItems: 'center', justifyContent: 'center', fontSize: 120, color: '#262728'}}> {numbers} </Text>
+                </TouchableOpacity>
               </Body>
             </CardItem>
         </Card>  
@@ -70,12 +71,3 @@ export default class Numbers extends React.Component {
       )
   }
 }
-
-
-{/* <Card
-          style={{height: deviceHeight * .60}}
-          title={numbers}
-          titleStyle={{fontSize: 100, marginTop: deviceHeight * .2}}
-          containerStyle={{ padding: 30, width: deviceWidth * .8, height: deviceHeight * .70}}
-          >
-        </Card> */}

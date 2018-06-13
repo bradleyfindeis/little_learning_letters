@@ -1,8 +1,7 @@
 import React from "react";
 import { Text, TouchableOpacity, View, Dimensions, ScrollView} from "react-native";
 import Modal from "react-native-simple-modal";
-import { Card } from 'react-native-elements';
-import Sketch from 'react-native-sketch';
+import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right, } from 'native-base';
 
 const deviceHeight = Dimensions.get('window').height
 const deviceWidth = Dimensions.get('window').width
@@ -36,15 +35,15 @@ export default class Letters extends React.Component {
       
       <ScrollView horizontal={true} style={{ alignItems: "center" }}>
         { letters.map(letters => (
-        <TouchableOpacity onPress={this.openModal}>
-          <Card
-            style={{height: deviceHeight * .60}}
-            title={letters}
-            titleStyle={{fontSize: 100, marginTop: deviceHeight * .2}}
-            containerStyle={{ padding: 30, width: deviceWidth * .8, height: deviceHeight * .70}}
-            >
-          </Card>
-        </TouchableOpacity>
+          <Card style={{height: deviceHeight * .6, width: deviceWidth * .8}}>
+            <CardItem header style={{height: deviceHeight * .6, width: null, flex: 1,}}>
+              <Body style={{ justifyContent: 'center', alignItems: 'center'}} onPress={this.openModal}>
+                <TouchableOpacity onPress={this.openModal}>
+                  <Text style={{ alignItems: 'center', justifyContent: 'center', fontSize: 120, color: '#262728'}}> {letters} </Text>
+                </TouchableOpacity>
+              </Body>
+            </CardItem>
+        </Card>  
         ))}
         <Modal
           offset={this.state.offset}
@@ -53,7 +52,6 @@ export default class Letters extends React.Component {
           modalDidClose={this.modalDidClose}
           style={{ alignItems: "center" }}
         >
-          <View style={{ alignItems: "center" }}>
             <Text style={{ fontSize: 20, marginBottom: 10 }}>Hello world!</Text>
             <TouchableOpacity style={{ margin: 5 }} onPress={this.moveUp}>
               <Text>Move modal up</Text>
@@ -67,7 +65,6 @@ export default class Letters extends React.Component {
             <TouchableOpacity style={{ margin: 5 }} onPress={this.closeModal}>
               <Text>Close modal</Text>
             </TouchableOpacity>
-          </View>
         </Modal> 
         </ScrollView>
       )

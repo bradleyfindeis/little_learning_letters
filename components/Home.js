@@ -11,12 +11,12 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{fontSize: 30}}>Little Learners Home</Text>
+        <Text style={{fontSize: 30}}>Little Learners</Text>
         <Button style={styles.button} block success onPress={() => this.props.navigation.navigate('Letters')}><Text style={styles.text}>Letters</Text></Button>
         <Button style={styles.button} block warning onPress={() => this.props.navigation.navigate('Numbers')}><Text style={styles.text}>Numbers</Text></Button>
         <Button style={styles.button} block info onPress={() => this.props.navigation.navigate('Colors')}><Text style={styles.text}>Colors</Text></Button>
         <Button style={styles.button} block danger onPress={() => this.props.navigation.navigate('Shapes')}><Text style={styles.text}>Shapes</Text></Button>
-        <Button style={styles.button} block danger onPress={() => this.props.navigation.navigate('MyFamily')}><Text style={styles.text}>My Family</Text></Button>
+        <Button style={styles.button} block primary onPress={() => this.props.navigation.navigate('MyFamily')}><Text style={styles.text}>My Family</Text></Button>
       </View>
     );
   }

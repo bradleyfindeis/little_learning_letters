@@ -12,19 +12,25 @@ export default class Shapes extends React.Component {
     open: false, 
         shapes: [
           { shape: "Circle",
-            link: "https://commons.wikimedia.org/wiki/File:Circle_-_black_simple.svg",
+            link: require("./circle.png"),
+            scale: 'contain'
+            
           },
           { shape: "Triangle",
-            link: "https://en.wiktionary.org/wiki/triangle",
+            link: require("./triangle.png"),
+            scale: 'contain'
           },
           { shape: "Square",
-            link: "https://en.wiktionary.org/wiki/square",
+            link: require("./square.png"),
+            scale: 'contain'
           },
           { shape: "Rectangle",
-            link: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.math.nmsu.edu%2F~breakingaway%2FLessons%2FCAR%2FCAR_files%2Fimage005.gif&imgrefurl=https%3A%2F%2Fwww.math.nmsu.edu%2F~breakingaway%2FLessons%2FCAR%2FCAR.html&docid=blANQGKNtwO3nM&tbnid=2n8LeNMUOTU6JM%3A&vet=10ahUKEwjbsoyLh8_bAhVM8IMKHexHAi0QMwjvASgCMAI..i&w=410&h=247&bih=976&biw=1680&q=rectangle&ved=0ahUKEwjbsoyLh8_bAhVM8IMKHexHAi0QMwjvASgCMAI&iact=mrc&uact=8",
+            link: require("./rectangle.png"),
+            scale: 'center'
           },
-          { shape: "Octogon",
-          link: "https://www.pelennapatchworks.co.uk/freezer-paper-templates-for-patchwork/octagon-freezer-paper-templates.html",
+          { shape: "Octagon",
+            link: require("./octagon.png"),
+            scale: 'contain'
           },
         ],
       }
@@ -54,11 +60,11 @@ export default class Shapes extends React.Component {
         { shapes.map(shapes => (
           <Card style={{height: deviceHeight * .6, width: deviceWidth * .8}}>
             <CardItem cardBody>
-            <Image source={require('./profilepic.jpg')} style={{height: 200, width: null, flex: 1}}/>
+            <Image source={shapes.link} style={{ resizeMode: shapes.scale, height: deviceHeight * .4, width: null, flex: 1}}/>
             </CardItem>
-            <CardItem header style={{height: deviceHeight * .6, width: null, flex: 1,}}>
+            <CardItem header style={{height: deviceHeight * .2, width: null, flex: 1,}}>
               <Body style={{ justifyContent: 'center', alignItems: 'center'}} onPress={this.openModal}>
-                <Text style={{ alignItems: 'center', justifyContent: 'center', fontSize: 40,}}> {shapes.shape} </Text>
+                <Text style={{ alignItems: 'center', justifyContent: 'center', fontSize: 40, color: '#262728'}}> {shapes.shape} </Text>
               </Body>
             </CardItem>
         </Card>  
@@ -90,12 +96,3 @@ export default class Shapes extends React.Component {
       )
   }
 }
-
-
-{/* <Card
-          style={{height: deviceHeight * .60}}
-          title={shapes}
-          titleStyle={{fontSize: 100, marginTop: deviceHeight * .2}}
-          containerStyle={{ padding: 30, width: deviceWidth * .8, height: deviceHeight * .70}}
-          >
-        </Card> */}

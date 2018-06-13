@@ -1,7 +1,8 @@
 import React from "react";
 import { Text, TouchableOpacity, TouchableHighlight, View, Dimensions, ScrollView, Image } from "react-native";
 import Modal from "react-native-simple-modal";
-import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base';
+import { Drawer, Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base';
+import SideBar from './SideBar';
 
 const deviceHeight = Dimensions.get('window').height
 const deviceWidth = Dimensions.get('window').width
@@ -40,11 +41,9 @@ export default class Colors extends React.Component {
     ],
   }
   
- 
   render() {
     const { colors } = this.state
     return  (
-      
       <ScrollView style={{ alignItems: "center" }}>
         { colors.map(colors => (
           <Card style={{height: deviceHeight * .6, width: deviceWidth * .8}}>
