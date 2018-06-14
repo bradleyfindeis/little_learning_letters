@@ -14,212 +14,197 @@ export default class MyFamily extends React.Component {
       {
         name: "Grandpa",
         title: "Great Grandpa",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/grandpa.png')
       },
       {
-        name: "Grammyu",
+        name: "Grammy",
         title: "Great Grandma",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/grammy.png')
       },
       {
         name: "Baba",
         title: "Great Grandpa",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/baba.png')
       },
       {
         name: "Granny",
         title: "Great Grandma",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/granny.png')
+      },
+      {
+        name: "Pop Pop",
+        title: "Great Grandpa",
+        photo: require('./pictures/poppop.jpg')
+      },
+      {
+        name: "Char",
+        title: "Great Grandma",
+        photo: require('./pictures/char.png')
       },
       {
         name: "Oma",
         title: "Grandma",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/momjovi.png')
       },
       {
         name: "Pal",
         title: "Grandpa",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/pal.png')
       },
       {
         name: "Gran",
         title: "Grandma",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/gran.png')
       },
       {
         name: "Laura",
         title: "Aunt",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/waffz.png')
       },
       {
         name: "Chris",
         title: "Uncle",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/chris.png')
       },
       {
         name: "Amber",
         title: "Aunt",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/amber.png')
       },
       {
         name: "Jeffrey",
         title: "Uncle",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/jeffrey.png')
       },
       {
         name: "Carly",
         title: "Aunt",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/carly.png')
       },
       {
         name: "Brad",
         title: "Uncle",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/brad.png')
       },
       {
         name: "Melissa",
         title: "Aunt",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/melissa.png')
       },
       {
         name: "Chelsea",
         title: "Aunt",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/chelsea.png')
       },
       {
         name: "Ryan",
         title: "Uncle",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/ryan.png')
       },
       {
         name: "Meagan",
         title: "Aunt",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/meagan.png')
       },
       {
         name: "Kurt",
         title: "Uncle",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/kurt.png')
       },
       {
         name: "Stuart",
         title: "Uncle",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/stuart.png')
       },
       {
         name: "Alicia",
         title: "Aunt",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/alicia.png')
       },
       {
         name: "Ian",
         title: "Uncle",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/ian.png')
       },
       {
         name: "Lynette",
         title: "Aunt",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/lynette.png')
       },
       {
         name: "Sophia",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
-      },
-      {
-        name: "Other Kid",
-        title: "Cousin",
-        photo: require('./profilepic.jpg')
-      },
-      {
-        name: "Deisen",
-        title: "Cousin",
-        photo: require('./profilepic.jpg')
-      },
-      {
-        name: "Ivy",
-        title: "Cousin",
-        photo: require('./profilepic.jpg')
-      },
-      {
-        name: "Axel",
-        title: "Cousin",
-        photo: require('./profilepic.jpg')
-      },
-      {
-        name: "Sophia",
-        title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/sophia.png')
       },
       {
         name: "Kinley",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/kinley.png')
       },
       {
         name: "Deisen",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/deisen.png')
       },
       {
         name: "Ivy",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/ivys.png')
       },
       {
         name: "Axel",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/axel.png')
       },
       {
         name: "Mason",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/mason.png')
       },
       {
         name: "Adalie",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/adalie.png')
       },
       {
         name: "Zoe",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/zoe.png')
       },
       {
         name: "Mac",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/mac.png')
       },
       {
         name: "Ivy",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/ivy.png')
       },
       {
         name: "Gemma",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/gemma.png')
       },
       {
         name: "Nolan",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/nolan.png')
       },
       {
         name: "Lucy",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/lucy.png')
       },
       {
         name: "Rosie",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/rosie.png')
       },
       {
         name: "Shylie",
         title: "Cousin",
-        photo: require('./profilepic.jpg')
+        photo: require('./pictures/shylie.png')
       },
     ],
   }
@@ -247,7 +232,7 @@ export default class MyFamily extends React.Component {
         { family.map(family => (
         <Card style={{height: deviceHeight * .6, width: deviceWidth * .8}}>
           <CardItem cardBody>
-            <Image source={family.photo} style={{height: deviceHeight * .4, width: null, flex: 1}}/>
+            <Image source={family.photo} style={{ resizeMode: 'contain', height: deviceHeight * .4, width: null, flex: 1}}/>
           </CardItem>
           <CardItem header style={{height: deviceHeight * .2, width: null, flex: 1,}}>
             <Body style={{ justifyContent: 'center', alignItems: 'center'}} onPress={this.openModal}>

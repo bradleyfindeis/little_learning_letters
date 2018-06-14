@@ -41,22 +41,28 @@ export default class Colors extends React.Component {
     ],
   }
   
+ 
   render() {
     const { colors } = this.state
     return  (
-      <ScrollView style={{ alignItems: "center" }}>
-        { colors.map(colors => (
-          <Card style={{height: deviceHeight * .6, width: deviceWidth * .8}}>
-            <CardItem header style={{height: deviceHeight * .6, width: null, flex: 1, backgroundColor: colors.color}}>
-            </CardItem>
-          <CardItem>
-            <Body>
-              <Text style={{ alignItems: 'center'}}> {colors.name}</Text>
-            </Body>
-          </CardItem>
-        </Card>
-      ))}
-      </ScrollView> 
+      <Drawer
+        ref={(ref) => { this.drawer = ref; }}
+        content={<SideBar navigator={this.navigator} />}
+        onClose={() => this.closeDrawer()} >
+          <ScrollView style={{ alignItems: "center" }}>
+            { colors.map(colors => (
+              <Card style={{height: deviceHeight * .6, width: deviceWidth * .8}}>
+                <CardItem header style={{height: deviceHeight * .6, width: null, flex: 1, backgroundColor: colors.color}}>
+                </CardItem>
+              <CardItem>
+                <Body>
+                  <Text style={{ alignItems: 'center'}}> {colors.name}</Text>
+                </Body>
+              </CardItem>
+            </Card>
+          ))}
+          </ScrollView> 
+        </Drawer>
     )
   }
 }
