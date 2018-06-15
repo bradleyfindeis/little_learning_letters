@@ -7,6 +7,7 @@ import Numbers from './components/Numbers';
 import Colors from './components/Colors';
 import Shapes from './components/Shapes';
 import MyFamily from './components/MyFamily';
+import MyFriends from './components/MyFriends';
 
 
 const RootStack = StackNavigator(
@@ -28,6 +29,9 @@ const RootStack = StackNavigator(
     },
     MyFamily: {
       screen: MyFamily,
+    },
+    MyFriends: {
+      screen: MyFriends,
     },
   },
   {

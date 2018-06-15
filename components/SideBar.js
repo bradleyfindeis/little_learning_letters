@@ -39,7 +39,7 @@ export default class SideBar extends Component {
     return (
       <ScrollView style={styles.container}>
         <Text style={styles.text}>Side Menu</Text>
-        <Image source={require('./profilepic.jpg')} style={styles.topImage} />
+        <Image source={require('./pictures/profilepic.jpg')} style={styles.topImage} />
           <Button style={styles.button} block success onPress={() => this.props.navigation.navigate('Letters')}><Text style={styles.text}>Letters</Text></Button>
           <Button style={styles.button} block warning onPress={() => this.props.navigation.navigate('Numbers')}><Text style={styles.text}>Numbers</Text></Button>
       </ScrollView>

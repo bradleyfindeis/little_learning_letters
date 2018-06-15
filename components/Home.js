@@ -5,6 +5,7 @@ import { StackNavigator } from 'react-navigation';
 import Numbers from './Numbers';
 import Colors from './Colors';
 import MyFamily from './MyFamily';
+import MyFriends from './MyFriends';
 
 
 export default class HomeScreen extends React.Component {
@@ -16,7 +17,9 @@ export default class HomeScreen extends React.Component {
         <Button style={styles.button} block warning onPress={() => this.props.navigation.navigate('Numbers')}><Text style={styles.text}>Numbers</Text></Button>
         <Button style={styles.button} block info onPress={() => this.props.navigation.navigate('Colors')}><Text style={styles.text}>Colors</Text></Button>
         <Button style={styles.button} block danger onPress={() => this.props.navigation.navigate('Shapes')}><Text style={styles.text}>Shapes</Text></Button>
-        <Button style={styles.button} block primary onPress={() => this.props.navigation.navigate('MyFamily')}><Text style={styles.text}>My Family</Text></Button>
+        <Button style={styles.button} block dark onPress={() => this.props.navigation.navigate('MyFamily')}><Text style={styles.text}>My Family</Text></Button>
+        <Button style={styles.button} block primary onPress={() => this.props.navigation.navigate('MyFriends')}><Text style={styles.text}>My Friends</Text></Button>
+
       </View>
     );
   }

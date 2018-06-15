@@ -2,10 +2,12 @@
 
 # expo
 .expo/
+# pictures
+.pictures/
 
 # dependencies
 /node_modules
-/pictures
+
 
 # misc
 .env.local
